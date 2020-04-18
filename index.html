@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jude moon">
+    <title>Suicidios en España</title>
+
+    <!-- load d3 and dimple libraries -->
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+
+    <!-- add styles to text and graphics -->
+    <style>
+        h1 {
+            background-color: black;
+            color: floralwhite;
+            font-family: Helvetica, sans-serif;
+            width: 100%;
+            height: 80px;
+            text-align: center;
+            padding-top: 30px;
+        }
+        h2 {
+            font-size: 1.4em;
+            text-transform: uppercase;
+            font-family: Helvetica;
+            color: #000;
+            margin-top: 0;
+        }
+        h3 {
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+        }
+        h4 {
+            font-family: Helvetica, sans-serif;
+            text-align: left;
+        }
+        div.text {
+            font-family: Helvetica;
+            padding: 5px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="main-title">Suicidios en España </h1>
+    <h4 class="main-autor">Nombre: José Ponce Chulani</h3>
+    <h4 class="main-url">Url: <a href="https://js-1kbgey.stackblitz.io">https://js-1kbgey.stackblitz.io</a></h3>
+    <h4 class="main-fuente">Fuente: <a href="https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016">https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016</a></h3>
+    <h4 class="main-fuente">Tableau Public: <a href="https://public.tableau.com/views/SeminarioVisualizacindeDatos/Dashboard1?:display_count=y&publish=yes&:origin=viz_share_link">https://public.tableau.com/views/SeminarioVisualizacindeDatos/Dashboard1?:display_count=y&publish=yes&:origin=viz_share_link</a></h3>
+    <h4 class="main-fuente">Google Colaboratory: <a href="https://colab.research.google.com/drive/17rI8OfAayO69D5UA4Mdst-I9YrBdP8k5">https://public.tableau.com/views/SeminarioVisualizacindeDatos/Dashboard1?:display_count=y&publish=yes&:origin=viz_share_link</a></h3>
+    <h4 class="main-fecha">Fecha: 22/04/2020</h4>
+    <br>
+    <br>
+
+    <!-- add intro text to the page body -->
+    <div class="summary">
+        <h2 class="text-title">Resumen</h2>
+        <div class="text">
+
+<br>
+
+En este trabajo se ha accedio a una base de datos proporcionada por Kaggle (véase fuente) que tiene un registro de los suicidios en diferentes países del mundo desde 1978 hasta 2016. Utilizando Python con la herramienta Google Colab, cargamos los datos y se preprocesan los datos, eliminando todos los valores nulos. Con esta herramienta se hacen las agrupaciones necesaria para generar los gráficos que aquí mostramos, además de generar algunos de los mismos. Otra de las herramientas utilizada aquí a Tableau, a causa de su facilidad de uso y versatilidad. Como herramienta nueva hemos introducido Gnuplot que es de más bajo nivel, pero que me gusta mucho por la cantidad de parámetros que uno puede modificar, aunque tenga que conocer gran variedad de comandos. 
+
+<br>
+<br>
+<br>
+
+ <!-- add data visualization -->
+    <div class="plot">
+        <!-- The first bar chart -->
+        <h2 class="plot-title">Evolución temporal</h2>
+        <div class="text">
+          Utilizamos el tipo de gráfico de líneas para apreciar la evolución temporal de los suicidios en España. Además, en vez de usar los datos absolutos, se normalizan los datos entre 100.000 habitantes para así evitar ver un incremento o disminución de suicidios debido a un cambio demográfico.
+          <br>
+          Para esta visulización se ha utilizado Google Colaboratory.
+        </div>  
+        <div id="plotContainer1">
+<a href="https://ibb.co/HH5DYC0"><img src="https://i.ibb.co/871D2bJ/evolucion-temp.png" alt="evolucion-temp" border="0"></a><br /><a target='_blank' href='https://es.imgbb.com/'>imajenes para</a><br />
+        </div> 
+
+        <div class="text">
+          Como puede observarse, no hay una tendencia al alza de la densidad de suicidios sino al contrario, hay un notable descenso de los mismos. No obstante, es necesario destacar que parece haber un nuevo despunte en los últimos años del dataset. 
+          <br>
+          <br>
+
+          También podemos ver la evolución de la composición de densidad en hombres y mujeres. Para ello se usa un gráfico de área. Este gráfico se ha generado con Tableau.
+        </div>
+
+        <br>
+
+         <h2 class="plot-title"> Evolución de la composición de hombres/mujeres </h2>
+         <div id="plotContainer2">
+          <div class='tableauPlaceholder' id='viz1587211702194' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;ComposicionVisualizacin&#47;Hoja1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ComposicionVisualizacin&#47;Hoja1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;ComposicionVisualizacin&#47;Hoja1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1587211702194');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='90%';vizElement.style.height=(divElement.offsetWidth*0.5)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+         </div>
+
+         <div class="text">
+           Aunque la densidad de suicidios de hombres disminuya un poco y la de mujeres se mantiene relativamente constante, un hecho a tener en cuenta es que el número de suicidios de hombres quintuplica (o incluso más) al de mujeres en muchos casos. Con esta base de datos se desconoce el porqué de este hecho, pero es algo a tener en cuenta.
+         </div>
+
+        <br>
+
+      <h2 class="plot-title">Densidad de suicidios total por edad</h2>
+         <div calss="text">
+           Con esta base de datos también podemos comparar el número de suicidios por rangos de edades. Como el rango de edades viene definido ya en la base de datos, no podemos hacer divisiones personalizadas. En el siguiente gráfico presentamos un gráfico de barras generado con Google Colaboraty para comparar dicha densidad de suicidios. Se ha utilizado el gráfico de barras porque la longitud es el atributo más adecuado para hacer comparaciones. Podríamos haber usado un gráfico de tartas, pero al ser 6 categorías se habría hecho difícil su correcta comparación.
+         </div>
+          <br>
+        <div id="plotContainer3">
+        <a href="https://ibb.co/DRpYn3G"><img src="https://i.ibb.co/BCNGR84/edad.png" alt="edad" border="0"></a>
+        </div>
+        
+        <div class="text">
+          Está claro que tenemos un fuerte crecimiento (parece tener un comportamiento exponencial) de los suicidios al aumentar la edad de los inviduos. Este hecho puede ser debido a la soledad familiar y social, cuya probabilidad aumenta conforme pasan los años.
+        </div>
+      
+       <h2 class="plot-title">Correlación suicidios-GDP per cápita</h2>
+
+         <div class="text">
+           Por último, presentamos un gráfico de dispersión del número absoluto de suicidios en España con respecto al GDP per cápita. En este gráfico tenemos en cuenta los casos de todos los años, e incluimos una recta de regresión junto con su coeficiente de correlación. Este gráfico se ha realizado con la herramienta Gnuplot.
+         </div>
+
+        <br>       
+
+       <div id="plotContainer4">
+         <a href="https://ibb.co/xs8JZxs"><img src="https://i.ibb.co/9v3sPQv/regresion.png" alt="regresion" border="0"></a>
+       </div>
+       <br>
+       <div class="text">
+         Como se puede observar, para valores pequeños de GDP los puntos están menos dispersos, mientras que al crecer el valor estos se dispersan.<br>
+         También nos damos cuenta de que, sin ser demasiado fuerte, la correlación es positiva. En consecuencia, un crecimiento del producto interior bruto parece que viene con un aumento en el número de suicidios. En este punto hay que recordar que aquí no hay correlación, de hecho, es posible que el aumento del número de suicidios venga dado por un aumento de la brecha salarial generada con el crecimiento económico más que al propio PIB.
+       </div>
+
+  <h2 class="plot-title">  Comparativa mundial de suicidios</h2>
+    <div class="text">
+      Para finalizar, presentamos un dashboard generado con Tableau en el cual podemos comparar estos índices de suicidios entre diferentes países del mundo. <br>
+      Por un lado, un mapa de color indica la densidad de suicidios en los países de los que se tienen datos. Estos datos son una suma del rango de años seleccionado. <br>
+      Por otro lado, se presenta un gráfico de barras para comparar con más detalle los países que se deseen, pudiendo filtrarlos por densidad de suicidios 
+    </div>
+    <div id="plotContainer5">
+      <div class='tableauPlaceholder' id='viz1587225674760' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Se&#47;SeminarioVisualizacindeDatos&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SeminarioVisualizacindeDatos&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Se&#47;SeminarioVisualizacindeDatos&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1587225674760');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='877px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
