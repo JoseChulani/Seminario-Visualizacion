@@ -63,7 +63,9 @@
 
 <br>
 
-En este trabajo se ha accedio a una base de datos proporcionada por Kaggle (véase fuente) que tiene un registro de los suicidios en diferentes países del mundo desde 1978 hasta 2016. Utilizando Python con la herramienta Google Colab, cargamos los datos y se preprocesan los datos, eliminando todos los valores nulos. Con esta herramienta se hacen las agrupaciones necesaria para generar los gráficos que aquí mostramos, además de generar algunos de los mismos. Otra de las herramientas utilizada aquí a Tableau, a causa de su facilidad de uso y versatilidad. Como herramienta nueva hemos introducido Gnuplot que es de más bajo nivel, pero que me gusta mucho por la cantidad de parámetros que uno puede modificar, aunque tenga que conocer gran variedad de comandos. 
+En este trabajo se ha accedido a una base de datos proporcionada por Kaggle (véase fuente) que tiene un registro de los suicidios en diferentes países del mundo desde 1978 hasta 2016. En las siguientes visualizaciones se pretende dar una visión general de la tendencias de suicidios en España: la dependencia con el género, la edad y producto interior bruto. Por último se da una comparativa mundial del número de suicidios por cada 100.000 habitantes (densidad de suicidios).
+<br>
+Utilizando Python con la herramienta Google Colab, cargamos los datos y se preprocesan los datos, eliminando todos los valores nulos. Con esta herramienta se hacen las agrupaciones necesaria para generar los gráficos que aquí mostramos, además de generar algunos de los mismos. Otra de las herramientas utilizada aquí a Tableau, a causa de su facilidad de uso y versatilidad. Como herramienta nueva hemos introducido Gnuplot que es de más bajo nivel, pero que me gusta mucho por la cantidad de parámetros que uno puede modificar, aunque tenga que conocer gran variedad de comandos. 
 
 <br>
 <br>
@@ -76,7 +78,7 @@ En este trabajo se ha accedio a una base de datos proporcionada por Kaggle (véa
     <div class="text">
         Utilizamos el tipo de gráfico de líneas para apreciar la evolución temporal de los suicidios en España. Además, en vez de usar los datos absolutos, se normalizan los datos entre 100.000 habitantes para así evitar ver un incremento o disminución de suicidios debido a un cambio demográfico.
         <br>
-        Para esta visulización se ha utilizado Google Colaboratory.
+        Para esta visualización se ha utilizado Google Colaboratory.
       </div>  
 <div id="plotContainer1">
 <a href="https://ibb.co/HH5DYC0"><img src="https://i.ibb.co/871D2bJ/evolucion-temp.png" alt="evolucion-temp" border="0"></a><br /><a target='_blank' href='https://es.imgbb.com/'></a><br />
@@ -113,7 +115,7 @@ En este trabajo se ha accedio a una base de datos proporcionada por Kaggle (véa
         </div>
         
         <div class="text">
-          Está claro que tenemos un fuerte crecimiento (parece tener un comportamiento exponencial) de los suicidios al aumentar la edad de los inviduos. Este hecho puede ser debido a la soledad familiar y social, cuya probabilidad aumenta conforme pasan los años.
+          Está claro que tenemos un fuerte crecimiento (parece tener un comportamiento exponencial) de los suicidios al aumentar la edad de los individuos. Este hecho puede ser debido a la soledad familiar y social, cuya probabilidad aumenta conforme pasan los años.
         </div>
       
        <h2 class="plot-title">Correlación suicidios-GDP per cápita</h2>
